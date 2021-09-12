@@ -2,12 +2,13 @@
 const Express = require('express');
 
 // Controllers
-const { getGames } = require('../controllers/game');
+const { getGames, createGame } = require('../controllers/game');
 
 // Init
 const router = Express.Router();
 
 // Endpoints
 router.get('/', getGames);
+router.post('/', createGame);
 
 module.exports = router;
