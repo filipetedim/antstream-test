@@ -14,7 +14,6 @@ const server = Http.Server(app);
 
 // Mongoose settings
 Mongoose.Promise = global.Promise;
-Mongoose.set('useFindAndModify', False);
 Mongoose.connect(Config.getDatabaseConnectionUrl(), { useNewUrlParser: true }).catch((err) => {
   throw Error(err);
 });
@@ -34,4 +33,4 @@ server.listen(
   () => console.log(`Server started on port ${process.env.PORT || Config.PORT}`) // eslint-disable-line
 );
 
-modules.exports = app;
+module.exports = app;
