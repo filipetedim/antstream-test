@@ -5,10 +5,10 @@ const Express = require('express');
 const router = Express.Router();
 
 // Routes
-// TODO: import routes here
+const Game = require('./game');
 
 // Registrations
-// TODO: add routes here
+router.use('/game', Game);
 router.use((req, res) => res.status(404).json({ message: `${req.originalUrl} not found` }));
 
 module.exports = router;

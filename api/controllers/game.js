@@ -1,5 +1,5 @@
 // Package dependencies
-const { validationResult } = require('express-validator/check');
+const { validationResult } = require('express-validator');
 
 // Models
 const Game = require('../models/game');
