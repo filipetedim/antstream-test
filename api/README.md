@@ -8,8 +8,6 @@
 - [Development](#development)
 - [Documentation](#documentation)
 
-94NCDfijPuuLFtR
-
 ## Install
 
 - Database is hosted under MongoDB Atlas service, [explanation below](#Database)
@@ -24,7 +22,6 @@
 ## Database
 
 Decided to use a cloud service instead of a local instance to avoid issues when installing in different Operating Systems.
-
 MongoDB Atlas has a free forever tier sandbox that fits perfectly.
 
 ## Development
