@@ -3,7 +3,7 @@ const Mongoose = require('mongoose');
 
 // Schema
 const GameSchema = Mongoose.Schema({
-  parentComponent: { type: String, required: true },
+  parentComponent: [{ type: String, required: true }],
   name: { type: String, required: true },
   sizeWidth: { type: Number, required: true },
   sizeHeight: { type: Number, required: true },

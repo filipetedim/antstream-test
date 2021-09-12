@@ -5,8 +5,8 @@ const validateParentComponent = body('parentComponent')
   .not()
   .isEmpty()
   .withMessage('Parent Component is required')
-  .isString()
-  .withMessage('Parent Component should be a string');
+  .isArray()
+  .withMessage('Parent Component should be an array');
 
 const validateName = body('name')
   .not()
