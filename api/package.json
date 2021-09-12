@@ -1,0 +1,34 @@
+{
+  "name": "antstream-test-api",
+  "version": "1.0.0",
+  "description": "- [Install](#install)\r - [Run](#run)\r - [Database](#database)\r - [Development](#development)\r - [Documentation](#documentation)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "^6.0.5"
+  },
+  "lint-staged": {
+    "src/**/*.{js, json, css, scss, md}": [
+      "prettier --write"
+    ]
+  }
+}
