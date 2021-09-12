@@ -36,7 +36,7 @@ const validateSizeHeight = body('sizeHeight')
 const validateImage = body('image').isString().withMessage('Image should be a string');
 
 /**
- * Holds all the validations for creating a game.
+ * Holds all the validations for creating an achievement.
  */
 const validateCreateProps = [
   validateParentComponent,
