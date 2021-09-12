@@ -21,8 +21,8 @@ const createGame = (req, res) => {
     return res.status(400).json({ validationErrors: validationResult(req).array() });
   }
 
-  const { parentComponent, name, sizeWidth, sizeLength, image } = req.body;
-  const newGame = new Game({ parentComponent, name, sizeWidth, sizeLength, image });
+  const { parentComponent, name, sizeWidth, sizeHeight, image } = req.body;
+  const newGame = new Game({ parentComponent, name, sizeWidth, sizeHeight, image });
 
   newGame
     .save()
