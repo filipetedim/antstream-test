@@ -1,0 +1,6 @@
+{
+  "PORT": 3050,
+  "TOKEN_SECRET": "antstream_next_netflix_confirmed",
+  "TOKEN_VERSION": 1,
+  "TOKEN_EXPIRATION": "31d"
+}

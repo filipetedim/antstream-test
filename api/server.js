@@ -5,15 +5,17 @@ const Http = require('http');
 const Cors = require('cors');
 const BodyParser = require('body-parser');
 
+// Custom dependencies
+const Config = require('./config');
+
 // Init
 const app = Express();
 const server = Http.Server(app);
 
 // Mongoose settings
-const connectionUrl = `mongodb+srv://admin:94NCDfijPuuLFtR@cluster0.pyvwh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 Mongoose.Promise = global.Promise;
 Mongoose.set('useFindAndModify', False);
-Mongoose.connect(connectionUrl, { useNewUrlParser: true }).catch((err) => {
+Mongoose.connect(Config.getDatabaseConnectionUrl(), { useNewUrlParser: true }).catch((err) => {
   throw Error(err);
 });
 
@@ -28,8 +30,8 @@ app.use(BodyParser.json({ limit: '50mb' }));
 
 // Run server
 server.listen(
-  process.env.PORT,
-  () => console.log(`Server started on port ${process.env.PORT}`) // eslint-disable-line
+  process.env.PORT || Config.PORT,
+  () => console.log(`Server started on port ${process.env.PORT || Config.PORT}`) // eslint-disable-line
 );
 
 modules.exports = app;
