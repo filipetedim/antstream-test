@@ -1,4 +1,4 @@
-# Antstream TEst
+# Antstream Test - React App
 
 ## Table of Contents
 
