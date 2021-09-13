@@ -1,9 +1,25 @@
+.recommended-header {
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+
+  color: #efefef;
+  letter-spacing: 0.04em;
+  font-size: 1.5em;
+  line-height: 1em;
+
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #112645);
+}
+
+.recommended-error {
+  color: rgb(202, 202, 202);
+}
+
 .recommended-container {
   display: flex;
   position: relative;
   overflow-x: scroll;
-
-  margin-top: 1em;
 
   // Hide scroll bar but keep functionality
   -ms-overflow-style: none; /* IE and Edge */
