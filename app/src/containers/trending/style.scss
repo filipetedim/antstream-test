@@ -20,7 +20,8 @@
   display: flex;
   position: relative;
   overflow-x: scroll;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
+  scroll-behavior: smooth;
 
   // Hide scroll bar but keep functionality
   -ms-overflow-style: none; /* IE and Edge */

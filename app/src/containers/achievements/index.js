@@ -25,7 +25,7 @@ class Achievements extends Component {
         )}
 
         {/* Achievements */}
-        <div className="achievements-container container">
+        <div className="achievements-container container" right="false">
           {AchievementStore.getAllAchievements().map((achievement, i) => (
             <SelectableComponent key={i} style={{ width: '100%' }}>
               <Achievement key={i} data={achievement} />

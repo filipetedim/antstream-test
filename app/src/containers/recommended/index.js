@@ -25,9 +25,9 @@ class Recommended extends Component {
         )}
 
         {/* Recommended Games */}
-        <div className="recommended-container">
+        <div className="recommended-container" right="false" left="false" up="false">
           {GameStore.getRecommended().map((game, i) => (
-            <SelectableComponent key={i}>
+            <SelectableComponent key={i} name={game.name}>
               <Game
                 key={i}
                 style={{

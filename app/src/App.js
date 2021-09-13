@@ -18,6 +18,7 @@ import AchievementService from './services/achievementService';
 // Stores
 import GameStore from './stores/gameStore';
 import AchievementStore from './stores/achievementStore';
+import InputStore from './stores/inputStore';
 
 // Config
 import Config from './utils/config';
@@ -26,6 +27,7 @@ class App extends Component {
   state = { loading: true };
 
   async componentDidMount() {
+    // Load data
     try {
       const { data: games } = await GameService.getGames();
       GameStore.loadGames(games);
@@ -41,6 +43,9 @@ class App extends Component {
     } catch (error) {
       AchievementStore.setError(true);
     }
+
+    // Register on key down events
+    InputStore.addEventListeners(document);
 
     // Give the loading a few seconds even if it's faster for user experience
     setTimeout(() => this.setState({ loading: false }), Config.SPINNER_TIME);

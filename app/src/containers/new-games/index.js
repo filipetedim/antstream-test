@@ -25,7 +25,7 @@ class NewGames extends Component {
         )}
 
         {/* New Games */}
-        <div className="new-games-container">
+        <div className="new-games-container" left="false">
           {GameStore.getNewGames().map((game, i) => (
             <SelectableComponent key={i}>
               <Game

@@ -32,6 +32,8 @@ The `src/` folder structure is sub-divided as below, with the notable files expl
 
 Input manager Rules:
 
+- When moving, has to prio inside it's own "container type"
+- When moving outside it's container type, prio the container type on the direction of the arrow pressed
 - If click left/right erase the current Vertical default
 - If click top/bottom erase the current Horizontal defaults
 - Always go to the next (right left bottom up) regardless of vertical/Horizontal defaults

@@ -25,7 +25,7 @@ class Trending extends Component {
         )}
 
         {/* Trending Games */}
-        <div className="trending-container">
+        <div className="trending-container" right="false" left="false">
           {GameStore.getTrendingGames().map((game, i) => (
             <SelectableComponent
               key={i}

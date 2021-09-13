@@ -1,3 +1,4 @@
+// Package dependencies
 import { extendObservable } from 'mobx';
 
 class GameStore {
