@@ -44,8 +44,6 @@ class InputStore {
     const currentY = this.getY0(ref.current) - 90;
     const currentX = this.getX0(ref.current) - 180;
 
-    console.log(currentY, currentX);
-
     ref.current.parentNode.scrollLeft = currentX;
     window.scroll({
       top: currentY,
@@ -62,7 +60,6 @@ class InputStore {
     document.addEventListener('keydown', (event) => {
       switch (event.keyCode) {
         case KEYS.ESCAPE_KEY:
-          console.log('hello');
           break;
         case KEYS.ARROW_UP:
           this.calculateRects();
