@@ -28,7 +28,16 @@ class Recommended extends Component {
         <div className="recommended-container">
           {GameStore.getRecommended().map((game, i) => (
             <SelectableComponent key={i}>
-              <Game key={i} data={game} />
+              <Game
+                key={i}
+                style={{
+                  backgroundImage: `url("${game.category.image}")`,
+                  minHeight: `${game.category.height * 6}em`,
+                  minWidth: `${game.category.width * 6}em`,
+                  maxHeight: `${game.category.height * 6}em`,
+                  maxWidth: `${game.category.width * 6}em`,
+                }}
+              />
             </SelectableComponent>
           ))}
         </div>

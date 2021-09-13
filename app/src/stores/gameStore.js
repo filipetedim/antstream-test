@@ -27,15 +27,27 @@ class GameStore {
    * Returns all the games who are supposed to be shown in recommended.
    */
   getRecommended = () =>
-    this.games.filter((game) =>
-      game.categories.some((category) => category.name === 'recommended')
-    );
+    this.games
+      .map((game) => {
+        return {
+          ...game,
+          category: game.categories.filter((category) => category.name === 'recommended')[0],
+        };
+      })
+      .filter((game) => game.category);
 
   /**
    * Returns all the games who are supposed to be shown in new games.
    */
   getNewGames = () =>
-    this.games.filter((game) => game.categories.some((category) => category.name === 'new games'));
+    this.games
+      .map((game) => {
+        return {
+          ...game,
+          category: game.categories.filter((category) => category.name === 'new games')[0],
+        };
+      })
+      .filter((game) => game.category);
 }
 
 export default new GameStore();
