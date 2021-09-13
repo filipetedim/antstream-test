@@ -4,7 +4,9 @@ import reportWebVitals from './reportWebVitals';
 
 // Theme
 import 'typeface-roboto';
-import './index.scss';
+import './theme/normalize.scss';
+import './theme/skeleton.scss';
+import './theme/index.scss';
 
 // App
 import App from './App';
