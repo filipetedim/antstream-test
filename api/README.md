@@ -36,5 +36,5 @@ TODO:
 
 - Recommended can only be 1x1, 2x1, 3x1
 - New Games can only be 2x2
-- Trending can be 1x1 or 1x2
+- Trending can be 1x2
 - All games can only be 1x1

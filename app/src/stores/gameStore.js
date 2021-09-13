@@ -47,7 +47,25 @@ class GameStore {
           category: game.categories.filter((category) => category.name === 'new games')[0],
         };
       })
-      .filter((game) => game.category);
+      .filter((game) => game.category)
+      .sort(() => Math.random() - 0.5);
+
+  /**
+   * Returns all the games who are supposed to be shown in trending.
+   */
+  getTrendingGames = () =>
+    this.games
+      .map((game) => {
+        return {
+          ...game,
+          category: game.categories.filter((category) => category.name === 'trending')[0],
+        };
+      })
+      .filter((game) => game.category)
+      .sort(() => Math.random() - 0.5);
+
+  // Developer Stories: I'm only sorting them here so it's more visually appealing in the page
+  //                    since I've added them manually one by one.
 }
 
 export default new GameStore();

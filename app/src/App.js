@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 // Containers
 import Recommended from './containers/recommended';
+import AllGames from './containers/all-games';
+import Trending from './containers/trending';
 import NewGames from './containers/new-games';
 import Achievements from './containers/achievements';
 
@@ -64,6 +66,16 @@ class App extends Component {
               </div>
               <div className="six columns">
                 <Achievements />
+              </div>
+            </div>
+            <div className="row">
+              <div className="twelve columns">
+                <Trending />
+              </div>
+            </div>
+            <div className="row">
+              <div className="twelve columns">
+                <AllGames />
               </div>
             </div>
           </div>

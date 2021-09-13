@@ -1,4 +1,4 @@
-.new-games-header {
+.all-games-header {
   padding-bottom: 0.3em;
   margin-bottom: 0.5em;
 
@@ -12,11 +12,11 @@
   border-image-source: linear-gradient(to left, #743ad5, #112645);
 }
 
-.new-games-error {
+.all-games-error {
   color: rgb(202, 202, 202);
 }
 
-.new-games-container {
+.all-games-container {
   display: flex;
   position: relative;
   flex-wrap: wrap;
