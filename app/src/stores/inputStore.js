@@ -9,10 +9,6 @@ class InputStore {
     extendObservable(this, {
       selectableComponents: [],
       currentRef: null,
-      currentX0: 0,
-      currentX1: 0,
-      currentY0: 0,
-      currentY1: 0,
       currentParent: null,
       // TODO: when press enter, give option to "LOCK" the parent container
       // and keep track of how many times enter has been pressed and keep an array [] of the
