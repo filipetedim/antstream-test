@@ -24,7 +24,7 @@ class Recommended extends Component {
           <div className="recommended-error">Something went wrong loading recommended games</div>
         )}
 
-        {/* Games */}
+        {/* Recommended Games */}
         <div className="recommended-container">
           {GameStore.getRecommended().map((game, i) => (
             <SelectableComponent key={i}>

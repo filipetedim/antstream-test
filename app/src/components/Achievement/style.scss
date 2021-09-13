@@ -1,0 +1,23 @@
+.achievement-container {
+  color: #e7e7e7;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 3em;
+  background: linear-gradient(-45deg, #112645 15%, #b19910);
+
+  padding: 0 1em;
+  min-height: 3em;
+  max-height: 3em;
+  min-width: 6em;
+
+  animation: 0.5s ease-out 0s 1 FadeIn;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

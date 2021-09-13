@@ -21,10 +21,10 @@ class NewGames extends Component {
 
         {/* Error */}
         {GameStore.error && (
-          <div className="new-games-error">Something went wrong loading recommended games</div>
+          <div className="new-games-error">Something went wrong loading new games</div>
         )}
 
-        {/* Games */}
+        {/* New Games */}
         <div className="new-games-container">
           {GameStore.getNewGames().map((game, i) => (
             <SelectableComponent key={i}>

@@ -1,0 +1,30 @@
+.achievements-header {
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+
+  color: #efefef;
+  letter-spacing: 0.04em;
+  font-size: 1.5em;
+  line-height: 1em;
+
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #112645);
+}
+
+.achievements-error {
+  color: rgb(202, 202, 202);
+}
+
+.achievements-container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+
+  // Hide scroll bar but keep functionality
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
