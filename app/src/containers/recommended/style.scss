@@ -1,0 +1,14 @@
+.recommended-container {
+  display: flex;
+  position: relative;
+  overflow-x: scroll;
+
+  margin-top: 1em;
+
+  // Hide scroll bar but keep functionality
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 // Components
 import Spinner from '../../components/Spinner';
+import Game from '../../components/Game';
 
 // Services
 import GameService from '../../services/gameService';
@@ -35,7 +36,7 @@ export default class Recommended extends Component {
     const { loading, loadingError, games } = this.state;
 
     return (
-      <React.Fragment>
+      <div className="recommended-container">
         {/* Loading */}
         {loading && <Spinner />}
 
@@ -43,8 +44,9 @@ export default class Recommended extends Component {
         {!loading && loadingError && <div>Something went wrong</div>}
 
         {/* Games */}
-        {!loading && games.map((game, i) => <div key={i}>{game.name}</div>)}
-      </React.Fragment>
+        {!loading && games.map((game, i) => <Game key={i} data={game} />)}
+        {!loading && games.map((game, i) => <Game key={i} data={game} />)}
+      </div>
     );
   }
 }

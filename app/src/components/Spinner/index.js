@@ -4,7 +4,7 @@ import React from 'react';
 // Theme
 import './style.scss';
 
-function Spinner() {
+export default () => {
   return (
     <svg
       width="76"
@@ -48,6 +48,4 @@ function Spinner() {
       </defs>
     </svg>
   );
-}
-
-export default Spinner;
+};
