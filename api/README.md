@@ -30,11 +30,9 @@ MongoDB Atlas has a free forever tier sandbox that fits perfectly.
 
 ## Documentation
 
-The structure is quite self-explanatory. Controllers/Models/Middlewares/Routes/Tests.
+For the sake of demonstration:
 
-TODO:
-
-- Recommended can only be 1x1, 2x1, 3x1
+- Recommended Games can only be 1x1, 2x1, 3x1
 - New Games can only be 2x2
-- Trending can be 1x2
-- All games can only be 1x1
+- Trending Games can be 1x2
+- All Games can only be 1x1

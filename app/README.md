@@ -24,25 +24,15 @@
 
 ## Documentation
 
-The `src/` folder structure is sub-divided as below, with the notable files explained.
+The Input Manager follows the following rule set
 
 ```md
-
+- When moving with Arrows, has it prioritizes the direction where clicked
+- Selectable Components reside inside Containers which be be restricted with props
+  -- This is so that if we wanted to create a pop-up, all it needs is props to "close down"
+- If it reaches the end of a row/column, spin around to the other side
+- It decides on a set of proximity rules which component to move to always based on visible area
+- Popups have access to store the previous selectable state in the store so that when closed the selection goes back
 ```
 
-Input manager Rules:
-
-- When moving, has to prio inside it's own "container type"
-- When moving outside it's container type, prio the container type on the direction of the arrow pressed
-- If click left/right erase the current Vertical default
-- If click top/bottom erase the current Horizontal defaults
-- Always go to the next (right left bottom up) regardless of vertical/Horizontal defaults
-- If no more things under, go back to the other end (going down -> go to top)
-- SelectableComponent -> SubSelectableComponent
-- When pressing Enter, run SubSelectableComponent search inside the bounds of the parent
-- When clicking Return, go back to SelectableComponent
-- If there are 2 direct components on the next move, check which one has "more area" inside the parent area (vertical or horizontal) to decide which to move to
-- Popups should have SubSelectableComponents and there should be a function to force the SelectableComponent (while storing the previous SelectableComponent), that runs when a popup or anything uses it and on "close" returns to the previous SelectableComponent
-- Move the screen accordingly to the positions
-
-Found bug in gamesparks-es6.js:114 where if the connection is higher than 2000ms to authenticate it will instantly kill the app, so slow connections/throttled) will be stuck in a forever loading screen
+Little bug: Found bug in gamesparks-es6.js where if the connection is higher than 2000ms to authenticate it will instantly kill the app, so slow connections/throttled) will be stuck in a forever loading screen
