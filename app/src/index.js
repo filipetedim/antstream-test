@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { Router } from 'react-router-dom';
 
 // Theme
 import 'typeface-roboto';
-import './index.css';
+import './index.scss';
 
 // App
 import App from './App';
-
-// Utils
-import History from './utils/history';
 
 ReactDOM.render(
   <React.StrictMode>
