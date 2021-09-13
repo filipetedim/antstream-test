@@ -7,7 +7,6 @@ import './style.scss';
 export default (props) => {
   return (
     <div
-      key={props.data.key}
       className="game-container"
       style={{
         backgroundImage: `url("${props.data.image}")`,

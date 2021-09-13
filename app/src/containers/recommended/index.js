@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // Components
 import Spinner from '../../components/Spinner';
 import Game from '../../components/Game';
+import SelectableComponent from '../../components/SelectableComponent';
 
 // Services
 import GameService from '../../services/gameService';
@@ -44,7 +45,12 @@ export default class Recommended extends Component {
         {!loading && loadingError && <div>Something went wrong</div>}
 
         {/* Games */}
-        {!loading && games.map((game, i) => <Game key={i} data={game} />)}
+        {!loading &&
+          games.map((game, i) => (
+            <SelectableComponent key={i}>
+              <Game key={i} data={game} />
+            </SelectableComponent>
+          ))}
         {!loading && games.map((game, i) => <Game key={i} data={game} />)}
       </div>
     );
