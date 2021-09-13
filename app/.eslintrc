@@ -3,14 +3,12 @@
     "browser": true,
     "es6": true
   },
-  "extends": [
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["plugin:prettier/recommended"],
 
   "plugins": ["prettier"],
 
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "no-return-assign": "off",
     "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": "off",
