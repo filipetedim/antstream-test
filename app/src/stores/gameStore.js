@@ -26,9 +26,13 @@ class GameStore {
   /**
    * Returns all the games who are supposed to be shown in recommended.
    */
-  getRecommended = () => {
-    return this.games.filter((game) => game.parentComponent.indexOf('recommended') > -1);
-  };
+  getRecommended = () =>
+    this.games.filter((game) => game.parentComponent.indexOf('recommended') > -1);
+
+  /**
+   * Returns all the games who are supposed to be shown in new games.
+   */
+  getNewGames = () => this.games.filter((game) => game.parentComponent.indexOf('new games') > -1);
 }
 
 export default new GameStore();

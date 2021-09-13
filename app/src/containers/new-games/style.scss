@@ -1,4 +1,4 @@
-.recommended-header {
+.new-games-header {
   padding-bottom: 0.3em;
   margin-bottom: 0.5em;
 
@@ -12,15 +12,14 @@
   border-image-source: linear-gradient(to left, #743ad5, #112645);
 }
 
-.recommended-error {
+.new-games-error {
   color: rgb(202, 202, 202);
 }
 
-.recommended-container {
+.new-games-container {
   display: flex;
   position: relative;
   overflow-x: scroll;
-  margin-bottom: 2em;
 
   // Hide scroll bar but keep functionality
   -ms-overflow-style: none; /* IE and Edge */

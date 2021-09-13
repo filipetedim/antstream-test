@@ -12,21 +12,21 @@ import GameStore from '../../stores/gameStore';
 // Theme
 import './style.scss';
 
-class Recommended extends Component {
+class NewGames extends Component {
   render() {
     return (
       <React.Fragment>
         {/* Header */}
-        <div className="recommended-header">Recommended Games</div>
+        <div className="new-games-header">New Games</div>
 
         {/* Error */}
         {GameStore.error && (
-          <div className="recommended-error">Something went wrong loading recommended games</div>
+          <div className="new-games-error">Something went wrong loading recommended games</div>
         )}
 
         {/* Games */}
-        <div className="recommended-container">
-          {GameStore.getRecommended().map((game, i) => (
+        <div className="new-games-container">
+          {GameStore.getNewGames().map((game, i) => (
             <SelectableComponent key={i}>
               <Game key={i} data={game} />
             </SelectableComponent>
@@ -37,4 +37,4 @@ class Recommended extends Component {
   }
 }
 
-export default observer(Recommended);
+export default observer(NewGames);

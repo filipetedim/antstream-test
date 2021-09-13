@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 // Containers
 import Recommended from './containers/recommended';
+import NewGames from './containers/new-games';
 
 // Components
 import Spinner from './components/Spinner';
@@ -44,6 +45,11 @@ class App extends Component {
             <div className="row">
               <div className="twelve columns">
                 <Recommended />
+              </div>
+            </div>
+            <div className="row">
+              <div className="twelve columns">
+                <NewGames />
               </div>
             </div>
           </div>
