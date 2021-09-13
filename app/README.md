@@ -42,3 +42,5 @@ Input manager Rules:
 - If there are 2 direct components on the next move, check which one has "more area" inside the parent area (vertical or horizontal) to decide which to move to
 - Popups should have SubSelectableComponents and there should be a function to force the SelectableComponent (while storing the previous SelectableComponent), that runs when a popup or anything uses it and on "close" returns to the previous SelectableComponent
 - Move the screen accordingly to the positions
+
+Found bug in gamesparks-es6.js:114 where if the connection is higher than 2000ms to authenticate it will instantly kill the app, so slow connections/throttled) will be stuck in a forever loading screen

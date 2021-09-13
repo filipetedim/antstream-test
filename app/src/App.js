@@ -1,7 +1,19 @@
+// Package dependencies
 import React from 'react';
 
+// Containers
+import Recommended from './containers/recommended';
+
 function App() {
-  return <div></div>;
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="twelve columns">
+          <Recommended />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
