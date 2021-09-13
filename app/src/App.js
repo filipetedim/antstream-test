@@ -48,7 +48,7 @@ class App extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="twelve columns">
+              <div className="six columns">
                 <NewGames />
               </div>
             </div>

@@ -19,7 +19,7 @@
 .new-games-container {
   display: flex;
   position: relative;
-  overflow-x: scroll;
+  flex-wrap: wrap;
 
   // Hide scroll bar but keep functionality
   -ms-overflow-style: none; /* IE and Edge */

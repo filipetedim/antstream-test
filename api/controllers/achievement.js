@@ -21,8 +21,8 @@ const createAchievement = (req, res) => {
     return res.status(400).json({ validationErrors: validationResult(req).array() });
   }
 
-  const { parentComponent, name, sizeWidth, sizeHeight, image } = req.body;
-  const newAchievement = new Achievement({ parentComponent, name, sizeWidth, sizeHeight, image });
+  const { name, sizeWidth, sizeHeight, image } = req.body;
+  const newAchievement = new Achievement({ name, sizeWidth, sizeHeight, image });
 
   newAchievement
     .save()

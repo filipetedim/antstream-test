@@ -1,13 +1,6 @@
 // Package dependencies
 const { body } = require('express-validator');
 
-const validateParentComponent = body('parentComponent')
-  .not()
-  .isEmpty()
-  .withMessage('Parent Component is required')
-  .isArray()
-  .withMessage('Parent Component should be an array');
-
 const validateName = body('name')
   .not()
   .isEmpty()
@@ -38,13 +31,7 @@ const validateImage = body('image').isString().withMessage('Image should be a st
 /**
  * Holds all the validations for creating an achievement.
  */
-const validateCreateProps = [
-  validateParentComponent,
-  validateName,
-  validateSizeWidth,
-  validateSizeHeight,
-  validateImage,
-];
+const validateCreateProps = [validateName, validateSizeWidth, validateSizeHeight, validateImage];
 
 module.exports = {
   validateCreateProps,
