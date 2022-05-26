@@ -24,7 +24,7 @@ import InputStore from './stores/inputStore';
 import Config from './utils/config';
 
 class App extends Component {
-  state = { loading: true };
+  state = {loading: true};
 
   async componentDidMount() {
     // Load data
